@@ -1,0 +1,56 @@
+/*Theme Colors*/
+/*Topbar Colors*/
+/*Sidebar Colors*/
+/*Boxed layout width*/
+/*Shadow*/
+/*transitions*/
+/*Dark transparent bg*/
+/*******************************/
+/*******************************/
+/**
+ * Table Of Content
+ *
+ *  1. Color system
+ *  2. Options
+ *  3. Body
+ *  4. Typography
+ *  5. Breadcrumbs
+ *  6. Cards
+ *  7. Dropdowns
+ *  8. Buttons
+ *  9. Typography
+ *  10. Progress bars
+ *  11. Tables
+ *  12. Forms
+ *  14. Component
+ */
+/*******************
+ sales chart
+*******************/
+.sales {
+  position: relative;
+  height: 270px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
+}
+.sales .ct-series-a .ct-area {
+  fill-opacity: 0.1;
+  fill: url(#gradient);
+}
+.sales .ct-series-a .ct-line, .sales .ct-series-a .ct-point {
+  stroke: #137eff;
+  stroke-width: 3px;
+}
+.sales .ct-series-b .ct-area {
+  fill: #c9d9ea;
+  fill-opacity: 0;
+}
+.sales .ct-series-b .ct-line, .sales .ct-series-b .ct-point {
+  stroke: #c9d9ea;
+  stroke-width: 3px;
+}
+.sales .ct-series-a .ct-point, .sales .ct-series-b .ct-point {
+  stroke-width: 5px;
+}
+.sales .ct-grid {
+  stroke-width: 0.5px;
+}/*# sourceMappingURL=dashboard1.css.map */

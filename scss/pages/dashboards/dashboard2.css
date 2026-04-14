@@ -1,0 +1,80 @@
+/*Theme Colors*/
+/*Topbar Colors*/
+/*Sidebar Colors*/
+/*Boxed layout width*/
+/*Shadow*/
+/*transitions*/
+/*Dark transparent bg*/
+/*******************************/
+/*******************************/
+/**
+ * Table Of Content
+ *
+ *  1. Color system
+ *  2. Options
+ *  3. Body
+ *  4. Typography
+ *  5. Breadcrumbs
+ *  6. Cards
+ *  7. Dropdowns
+ *  8. Buttons
+ *  9. Typography
+ *  10. Progress bars
+ *  11. Tables
+ *  12. Forms
+ *  14. Component
+ */
+.sales-ratio {
+  position: relative;
+  height: 212px;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.2));
+}
+.sales-ratio .ct-series-a .ct-area {
+  fill-opacity: 0.1;
+  fill: url(#gradient);
+}
+.sales-ratio .ct-series-a .ct-line, .sales-ratio .ct-series-a .ct-point {
+  stroke: #137eff;
+  stroke-width: 3px;
+}
+.sales-ratio .ct-series-a .ct-point, .sales-ratio .ct-series-b .ct-point {
+  stroke-width: 6px;
+}
+
+.sales2 {
+  position: relative;
+  height: 212px;
+  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.2));
+}
+.sales2 .ct-series-a .ct-area {
+  fill: none;
+}
+.sales2 .ct-series-a .ct-line, .sales2 .ct-series-a .ct-point {
+  stroke: #fff;
+  stroke-width: 3px;
+}
+.sales2 .ct-grid {
+  display: none;
+}
+.sales2 .ct-chart-bar .ct-label, .sales2 .ct-chart-line .ct-label {
+  display: none;
+}
+
+#weather {
+  position: relative;
+  height: 152px;
+  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.2));
+}
+#weather .ct-series-a .ct-area {
+  fill: none;
+}
+#weather .ct-series-a .ct-line, #weather .ct-series-a .ct-point {
+  stroke: #fff;
+  stroke-width: 3px;
+}
+#weather .ct-grid {
+  display: none;
+}
+#weather .ct-chart-bar .ct-label, #weather .ct-chart-line .ct-label {
+  display: none;
+}/*# sourceMappingURL=dashboard2.css.map */

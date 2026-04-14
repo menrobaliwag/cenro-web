@@ -1,0 +1,85 @@
+/* =========================================================
+   City ENRO: Brand / Logo
+========================================================= */
+
+.topbar .navbar-header .navbar-brand .logo{
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+  padding:.25rem .4rem;
+  border-radius: 12px;
+  text-decoration:none;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.topbar .navbar-header .navbar-brand .logo:hover{
+  background: rgba(255,255,255,.10);
+}
+
+/* If logo background is light, use subtle hover */
+.topbar .navbar-header[data-logobg="skin6"] .navbar-brand .logo:hover{
+  background: rgba(28,79,184,.06);
+}
+
+.topbar .navbar-header .navbar-brand .logo:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 .2rem rgba(255,255,255,.35);
+}
+
+.topbar .navbar-header[data-logobg="skin6"] .navbar-brand .logo:focus-visible{
+  box-shadow: 0 0 0 .2rem rgba(28,79,184,.22);
+}
+
+.topbar .navbar-header .navbar-brand .logo-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  overflow:hidden;
+  flex: 0 0 auto;
+  font-weight: inherit;
+}
+
+.topbar .navbar-header:not([data-logobg="skin6"]) .navbar-brand .logo-icon{
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.22);
+}
+
+.topbar .navbar-header[data-logobg="skin6"] .navbar-brand .logo-icon{
+  background: rgba(17,24,39,.04);
+  border: 1px solid rgba(17,24,39,.08);
+}
+
+.topbar .navbar-header .navbar-brand .logo-icon img.dark-logo,
+.topbar .navbar-header .navbar-brand .logo-icon img.light-logo{
+  height: 34px;
+  width: auto;
+  display:block;
+}
+
+.topbar .navbar-header .navbar-brand .logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+
+.topbar .navbar-header .navbar-brand .logo-text .dark-logo,
+.topbar .navbar-header .navbar-brand .logo-text .light-logo{
+  font-size: 1rem;
+}
+
+@media (max-width: 575.98px){
+  .topbar .navbar-header .navbar-brand .logo-text{ display:none; }
+  .topbar .navbar-header .navbar-brand .logo-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+  .topbar .navbar-header .navbar-brand .logo-icon img.dark-logo,
+  .topbar .navbar-header .navbar-brand .logo-icon img.light-logo{ height: 30px; }
+}
+

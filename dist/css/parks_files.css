@@ -1,0 +1,289 @@
+.parks-files-page .container-fluid {
+  padding-top: 12px;
+  padding-bottom: 32px;
+}
+
+.parks-files-card {
+  border: 1px solid #d8e1ef;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(16, 36, 72, 0.08);
+}
+
+.parks-files-card .card-body {
+  padding: 20px 22px;
+}
+
+.parks-back-btn {
+  min-width: 96px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #24375f 0%, #1b2a4a 100%);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.parks-back-btn:hover,
+.parks-back-btn:focus {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2e4b83 0%, #1f3561 100%);
+}
+
+.parks-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.parks-category-tabs {
+  gap: 8px;
+}
+
+.parks-category-tabs .nav-link {
+  border: 1px solid #bfd1e9;
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #17345f;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+}
+
+.parks-category-tabs .nav-link.active {
+  border-color: #1f4a88;
+  background: #1f4a88;
+  color: #ffffff;
+}
+
+.parks-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.parks-category-tabs .nav-link:not(.active) .parks-badge {
+  background: #e7f0fb;
+  color: #1a3a6a;
+}
+
+.parks-upload-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 340px;
+  padding: 6px;
+  border: 1px solid #cbd9ee;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.parks-file-input-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.parks-pick-btn {
+  height: 36px;
+  border: 1px solid #b8cde8;
+  border-radius: 9px;
+  background: #f4f8ff;
+  color: #15355f;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.parks-pick-btn:hover,
+.parks-pick-btn:focus {
+  background: #eaf2ff;
+  color: #102e55;
+}
+
+.parks-selected-file {
+  display: inline-block;
+  min-width: 170px;
+  max-width: 300px;
+  padding: 0 4px;
+  color: #415b7e;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.parks-upload-btn {
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  min-width: 104px;
+  background: linear-gradient(135deg, #188f5e 0%, #156da8 100%);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.parks-upload-btn:hover,
+.parks-upload-btn:focus {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1ea96e 0%, #1a80c3 100%);
+}
+
+.parks-upload-btn:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+  filter: saturate(0.7);
+}
+
+.parks-year-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.parks-year-tabs {
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.parks-year-tabs .nav-link {
+  border: 1px solid #c7d6ec;
+  border-radius: 10px;
+  background: #f9fbff;
+  color: #16345f;
+  font-weight: 700;
+  min-width: 72px;
+  text-align: center;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.parks-year-tabs .nav-link.active {
+  border-color: #1f4a88;
+  background: #1f4a88;
+  color: #ffffff;
+}
+
+.parks-year-pill-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 21px;
+  height: 21px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.parks-year-tabs .nav-link:not(.active) .parks-year-pill-count {
+  background: #e8f1fb;
+  color: #17345f;
+}
+
+.parks-year-select-wrap {
+  display: none;
+  min-width: 170px;
+}
+
+.parks-year-select-wrap .form-select {
+  border-radius: 10px;
+  border-color: #c7d6ec;
+}
+
+.parks-empty-state {
+  border: 1px dashed #b8cce7;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  text-align: center;
+  color: #4d6281;
+  background: #fbfdff;
+}
+
+.parks-file-link {
+  color: #15355f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.parks-file-link:hover,
+.parks-file-link:focus {
+  color: #0f8e5a;
+  text-decoration: underline;
+}
+
+.parks-files-page #parksFilesTable thead th {
+  background: #21365d;
+  color: #ffffff;
+  border-color: #2d4777;
+  font-weight: 700;
+}
+
+.parks-files-page .dataTables_wrapper .dataTables_filter input,
+.parks-files-page .dataTables_wrapper .dataTables_length select {
+  border: 1px solid #cdd9eb;
+  border-radius: 8px;
+}
+
+@media (max-width: 991.98px) {
+  .parks-files-card .card-body {
+    padding: 16px;
+  }
+
+  .parks-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .parks-upload-inline {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .parks-year-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .parks-year-select-wrap {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .parks-upload-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .parks-selected-file {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .parks-upload-btn {
+    width: 100%;
+  }
+}

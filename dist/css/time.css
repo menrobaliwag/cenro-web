@@ -1,0 +1,297 @@
+/* General */
+body {
+  font-size: clamp(0.9rem, 1.1vw, 1rem) !important;
+}
+
+.fade-in {
+  animation: fadeIn ease 0.5s forwards !important;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0 !important; transform: translateY(10px) !important; }
+  100% { opacity: 1 !important; transform: translateY(0) !important; }
+}
+
+/* Form Cards */
+.form-group-card {
+  background: var(--sys-surface, #fff) !important;
+  border: 1px solid var(--sys-border, #dbe3ec) !important;
+  border-radius: 12px !important;
+  padding: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Input Fields */
+.form-label {
+  font-size: 0.9rem !important;
+  color: var(--sys-muted, #495057) !important;
+  margin-bottom: 0.4rem !important;
+  display: block !important;
+}
+
+.form-control,
+.form-control-sm {
+  background-color: #f9fcff !important;
+  border: 1px solid #ccd8e4 !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.95rem !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+.form-control-sm:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 152, 121, 0.18) !important;
+  border-color: var(--sys-primary, #009879) !important;
+}
+
+.form-control::placeholder {
+  color: #adb5bd !important;
+  opacity: 1 !important;
+}
+
+/* Input with clear button */
+.input-clear-wrapper {
+  position: relative !important;
+  width: 100% !important;
+}
+
+.input-clear-wrapper input {
+  padding-right: 2.5rem !important;
+  height: 42px !important;
+}
+
+.input-clear-wrapper .clear-btn {
+  position: absolute !important;
+  right: 0.5rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  border: none !important;
+  background: transparent !important;
+  font-size: 1.25rem !important;
+  color: #6c757d !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: color 0.2s ease !important;
+}
+
+.input-clear-wrapper .clear-btn:hover {
+  color: #dc3545 !important;
+}
+
+.input-clear-wrapper .clear-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5) !important;
+  outline: none !important;
+}
+
+/* Buttons */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary.btn-sm {
+  height: 42px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  padding: 0 1.25rem !important;
+  border-radius: 6px !important;
+  box-shadow: 0 8px 18px rgba(27, 47, 79, 0.2) !important;
+}
+
+.btn-primary.btn-sm:hover {
+  box-shadow: 0 10px 22px rgba(27, 47, 79, 0.26) !important;
+  background-color: var(--sys-sidebar-2, #14243b) !important;
+}
+
+/* Icon Button (eye toggle) */
+.btn-eye {
+  background: transparent !important;
+  border: none !important;
+  font-size: 1.25rem !important;
+  color: var(--sys-sidebar, #1b2f4f) !important;
+  cursor: pointer !important;
+}
+
+.btn-eye:hover {
+  color: var(--sys-sidebar-2, #14243b) !important;
+}
+
+/* Action Buttons */
+.btn-action-left,
+.btn-action-right {
+  background-color: var(--sys-primary, #009879) !important;
+  color: #fff !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  padding: 0.4rem 1.2rem !important;
+  border: none !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 10px !important;
+}
+
+.btn-action-right {
+  margin-left: 6px !important;
+}
+
+.btn-action-left i,
+.btn-action-right i {
+  margin-right: 0.5rem !important;
+  font-size: 1.1rem !important;
+}
+
+.btn-action-left:hover,
+.btn-action-right:hover {
+  filter: brightness(0.95) !important;
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+/* Add Record Button */
+.btn-add-record {
+  background-color: var(--sys-primary, #009879) !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  padding: 0.3rem 1.5rem !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.btn-add-record:hover {
+  filter: brightness(0.95) !important;
+  color: #fff !important;
+}
+
+.btn-add-record i {
+  margin-right: 0.6rem !important;
+  font-size: 1.1rem !important;
+}
+
+/* Connected buttons (optional group style) */
+.btn-connected-left {
+  border-radius: 12px 0 0 12px !important;
+}
+
+.btn-connected-right {
+  border-radius: 0 12px 12px 0 !important;
+}
+
+/* Modal Sizes */
+.modal-xl {
+  max-width: 70% !important;
+}
+
+@media (max-width: 992px) {
+  .modal-xl {
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-xl {
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Highlight text */
+mark {
+  background-color: #ffc107 !important;
+  padding: 0 3px !important;
+  border-radius: 6px !important;
+}
+
+/* Table Styling */
+table td {
+  font-size: 1rem !important;
+  padding: 10px !important;
+  vertical-align: middle !important;
+  border-top: 1px solid #dee2e6 !important;
+  font-weight: 400 !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinning-gear.always-spin {
+  animation: spin 1s linear infinite;
+}
+/* Style the DataTables search filter */
+div.dataTables_filter {
+  margin-top: 10px !important;         /* Adds spacing from top (e.g., buttons) */
+  margin-bottom: 1rem !important;      /* Adds spacing below */
+}
+
+/* Style the input inside the search filter */
+div.dataTables_filter input {
+  margin-left: 10px !important;        /* Spacing between label and input */
+  border-radius: 10px !important;      /* Rounded corners */
+  padding: 0.5rem 1rem !important;     /* Padding inside the input */
+  border: 1px solid #ccd8e4 !important;/* Border */
+  background: #fff !important;
+  box-shadow: none !important;         /* Removes default shadow */
+}
+
+/* Add space between icon and text inside export buttons */
+#exportButtons .btn i {
+  margin-right: 4px !important;
+}
+
+.btn-sm {
+  font-size: 1rem !important;
+  padding: 0.3rem 0.75rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.dt-button.btn i {
+  font-size: 1rem !important;
+  margin-right: 4px !important;
+}
+
+.scroll-td {
+  max-width: 150px;          /* Adjust to fit your layout */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+  .dataTables_wrapper .dropdown-menu {
+    z-index: 1085 !important; /* Keep action menus above card/table layers */
+  }
+
+  .dataTables_scrollBody {
+    overflow-y: visible !important;
+    overflow-x: auto !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* Prevent dropdown from triggering scroll */
+  .dropdown-menu.show {
+    position: absolute !important;
+    will-change: transform;
+  }
+  @media (max-width: 768px) {
+    #file_export {
+      min-width: 0;
+    }
+  }

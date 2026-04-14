@@ -1,0 +1,302 @@
+.mbcurp-page .container-fluid {
+  padding-top: 12px;
+  padding-bottom: 32px;
+}
+
+.mbcurp-card {
+  border: 1px solid #d8e1ef;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(16, 36, 72, 0.08);
+}
+
+.mbcurp-card .card-body {
+  padding: 20px 22px;
+}
+
+.mbcurp-back-btn {
+  min-width: 96px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #24375f 0%, #1b2a4a 100%);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mbcurp-back-btn:hover,
+.mbcurp-back-btn:focus {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2e4b83 0%, #1f3561 100%);
+}
+
+.mbcurp-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mbcurp-folder-tabs {
+  gap: 8px;
+}
+
+.mbcurp-folder-tabs .nav-link {
+  border: 1px solid #bfd1e9;
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #17345f;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+}
+
+.mbcurp-folder-tabs .nav-link.active {
+  border-color: #1f4a88;
+  background: #1f4a88;
+  color: #ffffff;
+}
+
+.mbcurp-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.mbcurp-folder-tabs .nav-link:not(.active) .mbcurp-badge {
+  background: #e7f0fb;
+  color: #1a3a6a;
+}
+
+.mbcurp-upload-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 320px;
+  padding: 6px;
+  border: 1px solid #cbd9ee;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.mbcurp-file-input-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.mbcurp-pick-btn {
+  height: 36px;
+  border: 1px solid #b8cde8;
+  border-radius: 9px;
+  background: #f4f8ff;
+  color: #15355f;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mbcurp-pick-btn:hover,
+.mbcurp-pick-btn:focus {
+  background: #eaf2ff;
+  color: #102e55;
+}
+
+.mbcurp-selected-file {
+  display: inline-block;
+  min-width: 170px;
+  max-width: 280px;
+  padding: 0 4px;
+  color: #415b7e;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mbcurp-upload-btn {
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  min-width: 104px;
+  background: linear-gradient(135deg, #188f5e 0%, #156da8 100%);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mbcurp-upload-btn:hover,
+.mbcurp-upload-btn:focus {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1ea96e 0%, #1a80c3 100%);
+}
+
+.mbcurp-upload-btn:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+  filter: saturate(0.7);
+}
+
+.mbcurp-year-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mbcurp-year-tabs {
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mbcurp-year-tabs .nav-link {
+  border: 1px solid #c7d6ec;
+  border-radius: 10px;
+  background: #f9fbff;
+  color: #16345f;
+  font-weight: 700;
+  min-width: 72px;
+  text-align: center;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.mbcurp-year-tabs .nav-link.active {
+  border-color: #1f4a88;
+  background: #1f4a88;
+  color: #ffffff;
+}
+
+.mbcurp-year-pill-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 21px;
+  height: 21px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.mbcurp-year-tabs .nav-link:not(.active) .mbcurp-year-pill-count {
+  background: #e8f1fb;
+  color: #17345f;
+}
+
+.mbcurp-year-select-wrap {
+  display: none;
+  min-width: 170px;
+}
+
+.mbcurp-year-select-wrap .form-select {
+  border-radius: 10px;
+  border-color: #c7d6ec;
+}
+
+.mbcurp-banner {
+  border: 1px solid #d7e5f6;
+  border-radius: 12px;
+  background: #f5f9ff;
+  color: #2e4668;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+}
+
+.mbcurp-empty-state {
+  border: 1px dashed #b8cce7;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  text-align: center;
+  color: #4d6281;
+  background: #fbfdff;
+}
+
+.mbcurp-file-link {
+  color: #15355f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mbcurp-file-link:hover,
+.mbcurp-file-link:focus {
+  color: #0f8e5a;
+  text-decoration: underline;
+}
+
+.mbcurp-page #mbcurpFilesTable thead th {
+  background: #21365d;
+  color: #ffffff;
+  border-color: #2d4777;
+  font-weight: 700;
+}
+
+.mbcurp-page .dataTables_wrapper .dt-buttons {
+  margin-bottom: 10px;
+}
+
+.mbcurp-page .dataTables_wrapper .dataTables_filter input,
+.mbcurp-page .dataTables_wrapper .dataTables_length select {
+  border: 1px solid #cdd9eb;
+  border-radius: 8px;
+}
+
+@media (max-width: 991.98px) {
+  .mbcurp-card .card-body {
+    padding: 16px;
+  }
+
+  .mbcurp-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mbcurp-upload-inline {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .mbcurp-year-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mbcurp-year-select-wrap {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mbcurp-upload-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mbcurp-selected-file {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .mbcurp-upload-btn {
+    width: 100%;
+  }
+}

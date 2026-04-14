@@ -1,0 +1,9 @@
+config/data_key.php
+config/runtime.php
+sendphpmailer/sendmail.php
+secrets/
+*.key.php
+.vscode/
+sql/backups/
+uploads/*
+!uploads/.gitkeep

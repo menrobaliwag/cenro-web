@@ -1,0 +1,826 @@
+:root {
+  --dt-surface: #ffffff;
+  --dt-header-bg: #eaf1f8;
+  --dt-header-text: #1d3f5f;
+  --dt-border: #d4e1ec;
+  --dt-separator: #e6edf4;
+  --dt-row-even: #f9fbfd;
+  --dt-row-odd: #ffffff;
+  --dt-row-hover: #eef4fb;
+  --dt-row-selected: #e2edf8;
+  --dt-text: #233c52;
+  --dt-muted: #5b7085;
+  --dt-radius: 16px;
+  --dt-shadow: 0 10px 28px rgba(17, 37, 57, 0.08);
+  --dt-accent: #1f4f7a;
+  --dt-focus: #2f80c8;
+}
+
+/* --- Table shell / wrappers --- */
+body.app-shell .table-modern-wrap,
+body.app-shell .scrollable-table-wrapper {
+  width: 100%;
+  border: 1px solid var(--dt-border);
+  border-radius: var(--dt-radius);
+  background: var(--dt-surface);
+  box-shadow: var(--dt-shadow);
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+body.app-shell .table-modern-wrap.enro-dt-shell,
+body.app-shell .scrollable-table-wrapper.enro-dt-shell {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+body.app-shell .card.enro-dt-card {
+  overflow: visible !important;
+}
+
+body.app-shell .card .card-body.enro-dt-card-body {
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+body.app-shell .table-modern-wrap.enro-table-shell,
+body.app-shell .scrollable-table-wrapper.enro-table-shell {
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+body.app-shell .card .card-body.enro-dt-card-body .table-modern-wrap,
+body.app-shell .card .card-body.enro-dt-card-body .scrollable-table-wrapper,
+body.app-shell .card .card-body.enro-dt-card-body .dataTables_wrapper,
+body.app-shell .card .card-body.enro-dt-card-body .dataTables_scroll,
+body.app-shell .card .card-body.enro-dt-card-body .dataTables_scrollHead,
+body.app-shell .card .card-body.enro-dt-card-body .dataTables_scrollBody {
+  overflow-y: visible !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+body.app-shell .table-responsive.enro-dt-responsive {
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+  margin: 0;
+  border-radius: inherit;
+}
+
+body.app-shell .table-responsive.enro-dt-responsive > .table,
+body.app-shell .table-responsive.enro-dt-responsive > table.dataTable {
+  min-width: 0 !important;
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+/* --- DataTables container normalization --- */
+body.app-shell .dataTables_wrapper {
+  width: 100%;
+  margin: 0;
+  color: var(--dt-text);
+  position: relative;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_scroll,
+body.app-shell .dataTables_wrapper .dataTables_scrollHead,
+body.app-shell .dataTables_wrapper .dataTables_scrollBody {
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_scrollBody {
+  overflow: visible !important;
+  border: 0 !important;
+}
+
+body.app-shell .table-modern-wrap.dt-host .dataTables_scrollBody,
+body.app-shell .scrollable-table-wrapper.dt-host .dataTables_scrollBody {
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+/* --- Toolbar (buttons left, search right) --- */
+body.app-shell .dataTables_wrapper .enro-dt-toolbar,
+body.app-shell .dataTables_wrapper .enro-dt-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body.app-shell .dataTables_wrapper .enro-dt-toolbar {
+  margin-bottom: 14px;
+}
+
+body.app-shell .dataTables_wrapper .enro-dt-footer {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--dt-separator);
+}
+
+body.app-shell .dataTables_wrapper .dt-buttons,
+body.app-shell .dataTables_wrapper .dataTables_filter,
+body.app-shell .dataTables_wrapper .dataTables_info,
+body.app-shell .dataTables_wrapper .dataTables_paginate {
+  float: none !important;
+  margin: 0 !important;
+}
+
+body.app-shell .dataTables_wrapper .enro-dt-toolbar .dataTables_filter,
+body.app-shell .dataTables_wrapper .enro-dt-footer .dataTables_paginate {
+  margin-left: auto !important;
+}
+
+body.app-shell .dataTables_wrapper .dt-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+body.app-shell .dataTables_wrapper .dt-button.btn,
+body.app-shell .dataTables_wrapper .dt-buttons .btn {
+  border: 1px solid #cfd9e3;
+  background: #ffffff;
+  color: #264661;
+  border-radius: 11px;
+  padding: 0.43rem 0.8rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: all 180ms ease;
+}
+
+body.app-shell .dataTables_wrapper .dt-button.btn:hover,
+body.app-shell .dataTables_wrapper .dt-buttons .btn:hover {
+  background: #eef5fb;
+  border-color: #b7ccdf;
+  color: #173a57;
+  transform: translateY(-1px);
+}
+
+body.app-shell .dataTables_wrapper .dataTables_filter {
+  text-align: right;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_filter label {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dt-muted);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_filter input {
+  margin-left: 0 !important;
+  border: 1px solid #cfdbe6;
+  border-radius: 11px;
+  min-height: 38px;
+  padding: 0.45rem 0.75rem;
+  background: #ffffff;
+  color: #233f57;
+  min-width: 220px;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_filter input:focus,
+body.app-shell .dataTables_wrapper .dataTables_filter input:focus-visible {
+  outline: none !important;
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.16rem rgba(25, 135, 84, 0.16) !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_info {
+  color: var(--dt-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button {
+  min-width: 34px;
+  height: 34px;
+  line-height: 32px !important;
+  padding: 0 10px !important;
+  margin: 0 1px !important;
+  border: 1px solid #cfdae5 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  color: #2f4f69 !important;
+  font-size: 0.78rem !important;
+  font-weight: 700;
+  transition: all 180ms ease;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border-color: #b7cbde !important;
+  background: #edf4fb !important;
+  color: #173b59 !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: var(--dt-accent) !important;
+  border-color: var(--dt-accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 16px rgba(31, 79, 122, 0.2);
+}
+
+/* --- Data grid visual style --- */
+body.app-shell .dataTables_wrapper table.dataTable,
+body.app-shell .dataTables_wrapper table#file_export,
+body.app-shell .dataTables_wrapper .table.dataTable {
+  width: 100% !important;
+  margin: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  table-layout: fixed !important;
+  background: var(--dt-surface);
+}
+
+body.app-shell .dataTables_wrapper table.dataTable thead th,
+body.app-shell .dataTables_wrapper table#file_export thead th,
+body.app-shell .dataTables_wrapper .table.dataTable thead th {
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  background: linear-gradient(180deg, #f8fbfe 0%, var(--dt-header-bg) 100%) !important;
+  color: var(--dt-header-text) !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid #cfdcea !important;
+  padding: 13px 12px !important;
+  font-size: 0.74rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  vertical-align: middle;
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  text-overflow: clip !important;
+  overflow: visible !important;
+}
+
+/* Palit Basura: compact, one-line headers without horizontal scrolling */
+body.module-palitbasura .dataTables_wrapper table.dataTable,
+body.module-palitbasura .dataTables_wrapper table#file_export,
+body.module-palitbasura .dataTables_wrapper .table.dataTable {
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+body.module-palitbasura .dataTables_wrapper table.dataTable thead th,
+body.module-palitbasura .dataTables_wrapper table#file_export thead th,
+body.module-palitbasura .dataTables_wrapper .table.dataTable thead th {
+  white-space: nowrap !important;
+  font-size: 0.66rem !important;
+  letter-spacing: 0.02em !important;
+  padding: 10px 5px !important;
+  text-overflow: clip !important;
+  overflow: hidden !important;
+}
+
+body.module-palitbasura .dataTables_wrapper table.dataTable tbody td,
+body.module-palitbasura .dataTables_wrapper table#file_export tbody td,
+body.module-palitbasura .dataTables_wrapper .table.dataTable tbody td {
+  padding: 10px 6px !important;
+  font-size: 0.79rem !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody td,
+body.app-shell .dataTables_wrapper table#file_export tbody td,
+body.app-shell .dataTables_wrapper .table.dataTable tbody td {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid var(--dt-separator) !important;
+  padding: 12px 12px !important;
+  min-height: 50px;
+  vertical-align: middle;
+  font-size: 0.86rem;
+  color: var(--dt-text);
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tfoot th,
+body.app-shell .dataTables_wrapper table.dataTable tfoot td,
+body.app-shell .dataTables_wrapper table#file_export tfoot th,
+body.app-shell .dataTables_wrapper table#file_export tfoot td,
+body.app-shell .dataTables_wrapper .table.dataTable tfoot th,
+body.app-shell .dataTables_wrapper .table.dataTable tfoot td {
+  position: static !important;
+  bottom: auto !important;
+  background: #f4f8fc !important;
+  color: #1f3b56;
+  border-top: 1px solid var(--dt-border) !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  padding: 12px !important;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr:nth-child(odd) {
+  background: var(--dt-row-odd);
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr:nth-child(even) {
+  background: var(--dt-row-even);
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr:hover {
+  background: var(--dt-row-hover) !important;
+  cursor: pointer;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr.enro-dt-row-selected {
+  background: var(--dt-row-selected) !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable th:last-child,
+body.app-shell .dataTables_wrapper table.dataTable td:last-child,
+body.app-shell .dataTables_wrapper table#file_export th:last-child,
+body.app-shell .dataTables_wrapper table#file_export td:last-child {
+  white-space: nowrap !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable th.enro-dt-num,
+body.app-shell .dataTables_wrapper table.dataTable td.enro-dt-num,
+body.app-shell .dataTables_wrapper table.dataTable th.dt-type-numeric,
+body.app-shell .dataTables_wrapper table.dataTable td.dt-type-numeric,
+body.app-shell .dataTables_wrapper table.dataTable th.dt-body-right,
+body.app-shell .dataTables_wrapper table.dataTable td.dt-body-right {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable th.enro-dt-num:first-child,
+body.app-shell .dataTables_wrapper table.dataTable td.enro-dt-num:first-child {
+  text-align: left !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .btn,
+body.app-shell .dataTables_wrapper table.dataTable td .btn-sm {
+  border-radius: 8px;
+  min-height: 32px;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td:last-child,
+body.app-shell .dataTables_wrapper table#file_export td:last-child {
+  overflow: visible !important;
+  position: relative;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .dropdown,
+body.app-shell .dataTables_wrapper table#file_export td .dropdown {
+  position: relative;
+  z-index: 2;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .dropdown-menu {
+  border: 1px solid #d0dbe7;
+  border-radius: 11px;
+  box-shadow: 0 12px 26px rgba(16, 35, 56, 0.14);
+  padding: 6px;
+  z-index: 1085 !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .dropdown.show,
+body.app-shell .dataTables_wrapper table#file_export td .dropdown.show {
+  z-index: 1206 !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .dropdown-menu.show,
+body.app-shell .dataTables_wrapper table#file_export td .dropdown-menu.show {
+  z-index: 1207 !important;
+}
+
+/* Keep opened row action menu above neighboring rows/buttons */
+body.app-shell .dataTables_wrapper table.dataTable tbody tr {
+  position: relative;
+  z-index: 1;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr.enro-row-menu-open,
+body.app-shell .dataTables_wrapper table#file_export tbody tr.enro-row-menu-open {
+  z-index: 1300 !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr.enro-row-menu-open td,
+body.app-shell .dataTables_wrapper table#file_export tbody tr.enro-row-menu-open td {
+  position: relative;
+  z-index: 1300 !important;
+  overflow: visible !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr.enro-row-menu-open .dropdown,
+body.app-shell .dataTables_wrapper table#file_export tbody tr.enro-row-menu-open .dropdown {
+  z-index: 1301 !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable tbody tr.enro-row-menu-open .dropdown-menu,
+body.app-shell .dataTables_wrapper table#file_export tbody tr.enro-row-menu-open .dropdown-menu {
+  z-index: 1302 !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .dropdown-item {
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.42rem 0.6rem;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .dropdown-item:hover {
+  background: #edf4fb;
+  color: #173c5b;
+}
+
+/* Keep names in one clean line with ellipsis (icon + name) */
+body.app-shell .dataTables_wrapper table.dataTable td.enro-name-cell,
+body.app-shell .dataTables_wrapper table#file_export td.enro-name-cell {
+  white-space: nowrap !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .enro-name-inline,
+body.app-shell .dataTables_wrapper table#file_export td .enro-name-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .enro-name-inline .btn-eye,
+body.app-shell .dataTables_wrapper table#file_export td .enro-name-inline .btn-eye {
+  flex: 0 0 auto;
+  margin-bottom: 0 !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td .enro-name-inline .enro-name-text,
+body.app-shell .dataTables_wrapper table#file_export td .enro-name-inline .enro-name-text {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap !important;
+  display: block;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable td.dataTables_empty {
+  text-align: center !important;
+  padding: 22px 14px !important;
+  color: var(--dt-muted) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: linear-gradient(180deg, #fbfdff 0%, #f4f8fc 100%) !important;
+  border-bottom: 1px solid var(--dt-border) !important;
+}
+
+@media (max-width: 991.98px) {
+  body.app-shell .dataTables_wrapper .enro-dt-toolbar,
+  body.app-shell .dataTables_wrapper .enro-dt-footer {
+    align-items: stretch;
+  }
+
+  body.app-shell .dataTables_wrapper .enro-dt-toolbar .dataTables_filter,
+  body.app-shell .dataTables_wrapper .enro-dt-footer .dataTables_paginate {
+    margin-left: 0 !important;
+  }
+
+  body.app-shell .dataTables_wrapper .dataTables_filter {
+    text-align: left;
+    width: 100%;
+  }
+
+  body.app-shell .dataTables_wrapper .dataTables_filter label {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  body.app-shell .dataTables_wrapper .dataTables_filter input {
+    min-width: 0;
+    width: min(100%, 280px);
+  }
+
+  body.app-shell .dataTables_wrapper .dataTables_paginate {
+    justify-content: flex-start;
+  }
+}
+
+/* --- Flat DataTables shell + pagination (override) --- */
+body.app-shell .dataTables_wrapper,
+body.app-shell .dataTables_wrapper .dataTables_scroll,
+body.app-shell .dataTables_wrapper .dataTables_scrollHead,
+body.app-shell .dataTables_wrapper .dataTables_scrollBody,
+body.app-shell .dataTables_wrapper .dataTables_scrollHeadInner {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+body.app-shell .dataTables_wrapper table.dataTable,
+body.app-shell .dataTables_wrapper table#file_export,
+body.app-shell .dataTables_wrapper .table.dataTable {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+/* DataTables default markup: <a class=\"paginate_button\"> */
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button {
+  min-width: 32px;
+  height: 32px;
+  line-height: 30px !important;
+  padding: 0 10px !important;
+  border: 1px solid #d5deea !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  color: #2f4f69 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* Bootstrap 5 integration markup: <li class=\"paginate_button page-item\"><a class=\"page-link\"> */
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button .page-link,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.page-item .page-link {
+  min-width: 32px;
+  height: 32px;
+  line-height: 30px !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
+  border: 1px solid #d5deea !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  color: #2f4f69 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button:hover,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button:hover .page-link {
+  border-color: #c4d2e1 !important;
+  background: #f6f9fc !important;
+  color: #1f3e5a !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button.current,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.active .page-link,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.current .page-link,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover .page-link {
+  border-color: #1f4f7a !important;
+  background: #1f4f7a !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button:focus,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button:active,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button .page-link:focus,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button .page-link:active,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button .page-link:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_paginate .page-link:focus,
+body.app-shell .dataTables_wrapper .dataTables_paginate .page-link:active,
+body.app-shell .dataTables_wrapper .dataTables_paginate .page-link:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button:focus,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button:active,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_paginate a:focus-visible {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .page-link,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button {
+  --bs-pagination-focus-box-shadow: none;
+  --bs-focus-ring-shadow: none;
+  --bs-focus-ring-color: transparent;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+body.app-shell .dataTables_wrapper .dataTables_paginate a.paginate_button.disabled,
+body.app-shell .dataTables_wrapper .dataTables_paginate .paginate_button.disabled .page-link {
+  opacity: 0.55;
+  border-color: #dfe6ef !important;
+  background: #ffffff !important;
+  color: #8aa0b4 !important;
+  cursor: default !important;
+}
+
+/* Sorters report-style table polish (no horizontal scroll, no ellipsis) */
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table,
+body.app-shell .dataTables_wrapper table.dataTable.sorters-no-scroll-table {
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table thead th,
+body.app-shell .dataTables_wrapper table.dataTable.sorters-no-scroll-table thead th {
+  background: linear-gradient(180deg, #f6f9fc 0%, #eaf1f8 100%) !important;
+  color: #1f3b56 !important;
+  border-bottom: 1px solid #cfdbe8 !important;
+  font-size: 0.73rem !important;
+  letter-spacing: 0.045em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding: 10px 8px !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+  max-height: 2.4em !important;
+  min-height: 2.4em !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody td,
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tfoot td,
+body.app-shell .dataTables_wrapper table.dataTable.sorters-no-scroll-table tbody td,
+body.app-shell .dataTables_wrapper table.dataTable.sorters-no-scroll-table tfoot td {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  vertical-align: middle !important;
+  padding: 11px 8px !important;
+  color: #24425c !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody tr:nth-child(odd) {
+  background: #ffffff !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody tr:nth-child(even) {
+  background: #fbfdff !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody tr:hover {
+  background: #f2f7fc !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody td:nth-child(1),
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody td:nth-child(3),
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tbody td:nth-child(n+5):nth-child(-n+14),
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tfoot td {
+  text-align: center !important;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table td.dt-report-num,
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table th.dt-report-num {
+  text-align: center !important;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table th:nth-child(15),
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table td:nth-child(15) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table td:nth-child(15) .dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table th.dt-report-action,
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table td.dt-report-action {
+  text-align: center !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tfoot tr:first-child td {
+  background: #f6f9fc !important;
+  border-top: 1px solid #d9e4ef !important;
+  font-weight: 600 !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tfoot tr:last-child td {
+  background: #eaf1f8 !important;
+  border-top: 1px solid #cad9e8 !important;
+  color: #173b59 !important;
+  font-weight: 700 !important;
+}
+
+body.app-shell .dataTables_wrapper table#file_export.sorters-no-scroll-table tfoot td:first-child {
+  color: #1d3f5f !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+}
+
+/* Final override: DataTables search input focus (remove blue browser ring) */
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid #cfdbe6 !important;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]:focus,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]:active {
+  outline: none !important;
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.16rem rgba(25, 135, 84, 0.16) !important;
+}
+
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-decoration,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-cancel-button,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-results-button,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none !important;
+}
+
+/* Final focus cleanup for DataTables region only */
+body.app-shell .table-modern-wrap.dt-host:focus-within,
+body.app-shell .table-modern-wrap.enro-dt-shell:focus-within,
+body.app-shell .scrollable-table-wrapper.enro-dt-shell:focus-within,
+body.app-shell .dataTables_wrapper:focus-within,
+body.app-shell .enro-dt-card:focus-within,
+body.app-shell .enro-dt-card-body:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.app-shell .dataTables_wrapper .dt-button:focus,
+body.app-shell .dataTables_wrapper .dt-button:focus-visible,
+body.app-shell .dataTables_wrapper .dt-buttons .btn:focus,
+body.app-shell .dataTables_wrapper .dt-buttons .btn:focus-visible,
+body.app-shell .dataTables_wrapper table.dataTable thead th:focus,
+body.app-shell .dataTables_wrapper table.dataTable thead th:focus-visible,
+body.app-shell .dataTables_wrapper table.dataTable thead th[tabindex]:focus,
+body.app-shell .dataTables_wrapper table.dataTable thead th[tabindex]:focus-visible,
+body.app-shell .dataTables_wrapper table.dataTable tbody td .btn:focus,
+body.app-shell .dataTables_wrapper table.dataTable tbody td .btn:focus-visible,
+body.app-shell .dataTables_wrapper table.dataTable tbody td .dropdown-toggle:focus,
+body.app-shell .dataTables_wrapper table.dataTable tbody td .dropdown-toggle:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]:focus,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]:focus-visible,
+body.app-shell .dataTables_wrapper .dataTables_filter input[type="search"]:active {
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,218 @@
+/* =========================================================
+   IEC: Modal UI helpers (shared)
+========================================================= */
+
+/* === MODAL THEME (same vibe sa purple form) === */
+.modal-ux .modal-content{
+  border:0;
+  border-radius: 18px;
+  overflow:hidden;
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+}
+.modal-ux .modal-header{
+  padding: 18px 22px;
+  color:#fff;
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  border-bottom: 0;
+}
+.modal-ux .modal-title{
+  font-weight: 800;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  margin:0;
+}
+.modal-ux .modal-subtitle{
+  font-size: .875rem;
+  opacity:.85;
+  margin-top: 2px;
+}
+.modal-ux .modal-body{ padding: 22px; background:#fff; }
+.modal-ux .modal-footer{
+  padding: 16px 22px;
+  background: #f8fafc;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+/* Labels like pic (icon + title) */
+.ux-label{
+  font-weight: 700;
+  color:#4b5563;
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  margin-bottom: .35rem;
+}
+.ux-label i{ color:#7c3aed; }
+
+/* Inputs */
+.modal-ux .form-control,
+.modal-ux .form-select,
+.modal-ux textarea.form-control{
+  border-radius: 12px;
+  padding: .78rem .95rem;
+  border: 1px solid #d7dde7;
+  box-shadow: 0 2px 0 rgba(0,0,0,.02);
+}
+.modal-ux .form-control:focus,
+.modal-ux .form-select:focus,
+.modal-ux textarea.form-control:focus{
+  border-color: rgba(124,58,237,.55);
+  box-shadow: 0 0 0 .25rem rgba(124,58,237,.15);
+}
+
+/* Input with left icon (like pic) */
+.input-icon{ position:relative; }
+.input-icon .fi{
+  position:absolute; left:12px; top:50%;
+  transform: translateY(-50%);
+  color:#7c3aed; opacity:.9;
+  pointer-events:none;
+}
+.input-icon .form-control,
+.input-icon .form-select{
+  padding-left: 40px;
+}
+
+/* Footer buttons style */
+.btn-ux-primary{
+  background:#7c3aed; border-color:#7c3aed;
+  color:#fff;
+  border-radius: 10px;
+  padding: .62rem 1.25rem;
+  font-weight: 700;
+}
+.btn-ux-primary:hover{ filter: brightness(.95); }
+.btn-ux-secondary{
+  background:#6b7280; border-color:#6b7280;
+  color:#fff;
+  border-radius: 10px;
+  padding: .62rem 1.25rem;
+  font-weight: 700;
+}
+.btn-ux-secondary:hover{ filter: brightness(.95); }
+
+/* Optional: nicer help text */
+.modal-ux .form-text{ color:#6b7280; }
+
+/* =========================================================
+   Cleanup: compact modal size + compact fields
+========================================================= */
+.modal-ux-compact .modal-dialog{ max-width: 980px; } /* adjust 900-1050 */
+
+.modal-ux-compact .modal-content{
+  border:0;
+  border-radius: 18px;
+  overflow:hidden;
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+}
+
+.modal-ux-compact .modal-header{
+  padding: 16px 20px;
+  color:#fff;
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6); /* purple */
+  border:0;
+}
+
+.modal-ux-compact .modal-title{
+  font-weight: 800;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  margin:0;
+}
+.modal-ux-compact .modal-subtitle{
+  font-size: .85rem;
+  opacity: .85;
+  margin-top: 2px;
+}
+
+.modal-ux-compact .modal-body{ padding: 18px 20px; }
+.modal-ux-compact .modal-footer{
+  padding: 14px 20px;
+  background:#f8fafc;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+/* tighter grid */
+.modal-ux-compact .row.g-3{ --bs-gutter-y: .75rem; }
+.modal-ux-compact .row.g-3{ --bs-gutter-x: 1rem; }
+
+.modal-ux-compact .form-label{
+  font-weight: 700;
+  color:#4b5563;
+  margin-bottom:.35rem;
+}
+
+/* compact inputs */
+.modal-ux-compact .form-control,
+.modal-ux-compact .form-select,
+.modal-ux-compact textarea.form-control{
+  border-radius: 12px;
+  padding: .55rem .75rem;
+  font-size: .92rem;
+  border: 1px solid #d7dde7;
+  box-shadow: 0 2px 0 rgba(0,0,0,.02);
+}
+.modal-ux-compact .form-control:focus,
+.modal-ux-compact .form-select:focus,
+.modal-ux-compact textarea.form-control:focus{
+  border-color: rgba(124,58,237,.55);
+  box-shadow: 0 0 0 .25rem rgba(124,58,237,.15);
+}
+.modal-ux-compact textarea.form-control{ min-height: 90px; }
+
+/* input-group compact */
+.modal-ux-compact .input-group-text{
+  border-radius: 12px 0 0 12px;
+  padding: .5rem .65rem;
+  background:#f3f4f6;
+  border-color:#d7dde7;
+}
+
+/* footer buttons like pic #1 */
+.btn-ux-cancel{
+  background:#6b7280;
+  border-color:#6b7280;
+  color:#fff;
+  border-radius: 10px;
+  padding:.55rem 1.2rem;
+  font-weight: 800;
+}
+.btn-ux-save{
+  background:#7c3aed;
+  border-color:#7c3aed;
+  color:#fff;
+  border-radius: 10px;
+  padding:.55rem 1.2rem;
+  font-weight: 800;
+}
+.btn-ux-save:hover, .btn-ux-cancel:hover{ filter: brightness(.95); }
+
+/* View cards inside modal */
+.ux-card{
+  border:1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background:#fff;
+}
+.ux-card .k{ font-size:.78rem; color:#6b7280; }
+.ux-card .v{ font-weight:800; color:#111827; }
+
+/* =========================================================
+   IEC: Small utilities
+========================================================= */
+.iec-danger-header{
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+.iec-danger-box{
+  background: rgba(239,68,68,.08);
+  border: 1px solid rgba(239,68,68,.18);
+}
+.iec-prewrap{ white-space:pre-wrap; }
+.iec-gallery-img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  display:block;
+}

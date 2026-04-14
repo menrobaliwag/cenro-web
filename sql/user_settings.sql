@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS user_settings (
+  user_id INT NOT NULL,
+  ui_tone VARCHAR(20) NOT NULL DEFAULT 'green',
+  topbar_tone VARCHAR(20) NOT NULL DEFAULT 'green',
+  sidebar_tone VARCHAR(20) NOT NULL DEFAULT 'green',
+  avatar_path VARCHAR(255) NULL DEFAULT NULL,
+  topbar_skin VARCHAR(20) NOT NULL DEFAULT 'skin6',
+  sidebar_skin VARCHAR(20) NOT NULL DEFAULT 'skin6',
+  system_title VARCHAR(120) NOT NULL DEFAULT 'Waste Management Dashboard',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

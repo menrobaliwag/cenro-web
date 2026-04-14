@@ -1,0 +1,67 @@
+/*Theme Colors*/
+/*Topbar Colors*/
+/*Sidebar Colors*/
+/*Boxed layout width*/
+/*Shadow*/
+/*transitions*/
+/*Dark transparent bg*/
+/*******************************/
+/*******************************/
+/**
+ * Table Of Content
+ *
+ *  1. Color system
+ *  2. Options
+ *  3. Body
+ *  4. Typography
+ *  5. Breadcrumbs
+ *  6. Cards
+ *  7. Dropdowns
+ *  8. Buttons
+ *  9. Typography
+ *  10. Progress bars
+ *  11. Tables
+ *  12. Forms
+ *  14. Component
+ */
+.sales5 {
+  position: relative;
+  height: 278px;
+}
+.sales5 .ct-series-a .ct-area {
+  fill-opacity: 0.2;
+  fill: url(#gradient);
+}
+.sales5 .ct-series-a .ct-line, .sales5 .ct-series-a .ct-point {
+  stroke: #137eff;
+  stroke-width: 2px;
+}
+.sales5 .ct-series-b .ct-area {
+  fill: #5ac146;
+  fill-opacity: 0.1;
+}
+.sales5 .ct-series-b .ct-line, .sales5 .ct-series-b .ct-point {
+  stroke: #5ac146;
+  stroke-width: 2px;
+}
+.sales5 .ct-series-a .ct-point, .sales5 .ct-series-b .ct-point {
+  stroke-width: 6px;
+}
+
+.ct-series-a .ct-bar {
+  stroke: #137eff;
+}
+
+.ct-series-b .ct-bar {
+  stroke: #e9ecef;
+}
+
+.weather-report .c3-line {
+  stroke-width: 2px;
+}
+
+@media (max-width: 767px) {
+  .ct-bar {
+    stroke-width: 10px !important;
+  }
+}/*# sourceMappingURL=dashboard3.css.map */

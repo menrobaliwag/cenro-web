@@ -1,0 +1,64 @@
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_headers.c>
+    Header always unset X-Powered-By
+    Header always unset Server
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), fullscreen=*"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.datatables.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.datatables.net; img-src 'self' data: blob:; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+</IfModule>
+
+<IfModule mod_mime.c>
+    # Ensure icon/webfont files load correctly (prevents "square" placeholders in UI).
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+</IfModule>
+
+# Block direct access to hidden files except ACME challenge folders.
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Root-deployment compatibility: allow legacy /city_enro/* links
+    # to keep working after the app is deployed at domain root.
+    RewriteCond %{REQUEST_URI} ^/city_enro/ [NC]
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$ [NC]
+    RewriteRule ^city_enro/(.*)$ /$1 [R=302,L]
+
+    RewriteRule ^city_enro/(.*)$ $1 [L,NC]
+
+    # Block direct access to SQL dumps/migrations under /sql (may contain sensitive data).
+    RewriteRule ^sql/ - [F,NC,L]
+
+    # Block internal test and tooling directories from being served over HTTP.
+    # These may contain debug scripts, seeders, or maintenance utilities.
+    RewriteRule ^tests/ - [F,NC,L]
+    RewriteRule ^tools/ - [F,NC,L]
+
+    # Block known sensitive debug entrypoints at web root.
+    RewriteRule ^test_monitoring\.php$ - [F,NC,L]
+
+    # Prevent accidental execution of script-like files from uploads.
+    RewriteRule ^uploads/.*\.(php|php\d|phtml|phar|cgi|pl|py|jsp|asp|aspx|sh|bat)$ - [F,NC,L]
+</IfModule>
+
+# Defense-in-depth: deny specific sensitive files even if mod_rewrite is unavailable.
+<Files "test_monitoring.php">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</Files>

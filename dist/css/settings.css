@@ -1,0 +1,384 @@
+  .settings-page {
+    --gov-ink: #173857;
+    --gov-muted: #5f7a95;
+    --gov-line: #d7e4f0;
+    --gov-line-strong: #bfd2e5;
+    --gov-bg: #f5f8fb;
+    --gov-card: #ffffff;
+    --gov-primary-a: #198754;
+    --gov-primary-b: #1f6dd8;
+    --gov-focus: 0 0 0 3px rgba(31, 109, 216, 0.18);
+  }
+
+  .settings-page .settings-tabs-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  .settings-page .settings-tabs-nav .nav-link {
+    border: 1px solid var(--gov-line);
+    background: #fff;
+    color: var(--gov-ink);
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.5rem 0.95rem;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+  .settings-page .settings-tabs-nav .nav-link.active,
+  .settings-page .settings-tabs-nav .nav-link:focus-visible {
+    color: #fff;
+    border-color: transparent;
+    background: linear-gradient(135deg, var(--gov-primary-a), var(--gov-primary-b));
+    box-shadow: 0 8px 18px rgba(25, 135, 84, 0.24);
+  }
+
+  .settings-page .settings-tab-pane {
+    padding-top: 0.15rem;
+  }
+
+  .settings-page .card {
+    border: 1px solid var(--gov-line);
+    border-radius: 14px;
+    background: var(--gov-card);
+    box-shadow: 0 8px 20px rgba(17, 41, 65, 0.06);
+    overflow: hidden;
+  }
+  .settings-page .card .card-body {
+    padding: 1.1rem;
+  }
+  .settings-page .card-title {
+    color: var(--gov-ink);
+    font-weight: 700;
+    font-size: 1.18rem;
+    margin-bottom: 0.9rem !important;
+    letter-spacing: 0.01em;
+  }
+  .settings-page .settings-section-subtitle {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--gov-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.65rem;
+  }
+
+  .settings-page form .mb-3 {
+    margin-bottom: 0.9rem !important;
+  }
+  .settings-page .form-label {
+    margin-bottom: 0.4rem;
+    color: #476687;
+    font-weight: 600;
+    font-size: 0.98rem;
+  }
+  .settings-page .form-control,
+  .settings-page .form-select {
+    min-height: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--gov-line-strong);
+    background: #fff;
+    color: #163a5b;
+    font-size: 0.98rem;
+    line-height: 1.2;
+    padding: 0.56rem 0.82rem;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .settings-page textarea.form-control {
+    min-height: 96px;
+    height: auto;
+  }
+  .settings-page .form-control[readonly] {
+    background: var(--gov-bg);
+    color: #2f5377;
+  }
+  .settings-page .form-control::placeholder {
+    color: #8ca5bf;
+  }
+  .settings-page .form-control:focus,
+  .settings-page .form-select:focus {
+    border-color: #2f78d9;
+    box-shadow: var(--gov-focus);
+  }
+
+  .settings-page .settings-profile-photo {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: center;
+    border: 1px dashed var(--gov-line-strong);
+    border-radius: 12px;
+    padding: 0.55rem 0.6rem;
+    background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+  }
+  .settings-page .settings-avatar-preview {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 2px solid #d3dfec;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(17, 41, 65, 0.08);
+  }
+  .settings-page .settings-profile-photo .form-control[type="file"] {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .settings-page .form-control[type="file"]::file-selector-button,
+  .settings-page .form-control[type="file"]::-webkit-file-upload-button {
+    border: 0;
+    border-radius: 10px;
+    padding: 0.43rem 0.78rem;
+    margin-right: 0.65rem;
+    background: linear-gradient(135deg, #e8f2ff, #eaf8f2);
+    color: #234a6d;
+    font-weight: 600;
+  }
+
+  .settings-page .btn {
+    min-height: 44px;
+    border-radius: 11px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0.48rem 0.95rem;
+  }
+  .settings-page .btn.btn-primary {
+    border: 0;
+    color: #fff;
+    background-image: linear-gradient(135deg, var(--gov-primary-a), var(--gov-primary-b));
+    box-shadow: 0 9px 18px rgba(25, 135, 84, 0.22);
+  }
+  .settings-page .btn.btn-primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+  }
+  .settings-page .btn.btn-outline-secondary {
+    border: 1px solid var(--gov-line-strong);
+    color: #365879;
+    background: #fff;
+  }
+
+  .settings-page .appearance-theme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+  .settings-page .appearance-panel {
+    border: 1px solid var(--gov-line);
+    border-radius: 12px;
+    background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+    padding: 0.72rem;
+  }
+  .settings-page .appearance-panel .form-label {
+    display: block;
+    margin-bottom: 0.55rem;
+  }
+  .settings-page .tone-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  .settings-page .tone-item {
+    position: relative;
+  }
+  .settings-page .tone-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .settings-page .tone-card {
+    min-height: 42px;
+    margin: 0;
+    border: 1px solid #c6d7e9;
+    border-radius: 999px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.52rem;
+    padding: 0.4rem 0.58rem;
+    cursor: pointer;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  }
+  .settings-page .tone-card:hover {
+    border-color: #adc4dc;
+    background: #f7fbff;
+  }
+  .settings-page .tone-swatch {
+    width: 0.92rem;
+    height: 0.92rem;
+    border-radius: 999px;
+    background: var(--tone-color, #198754);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.48), 0 0 0 1px rgba(15, 41, 65, 0.16);
+    flex: 0 0 0.92rem;
+  }
+  .settings-page .tone-name {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #173d61;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .settings-page .tone-card::after {
+    content: '';
+    width: 0.95rem;
+    height: 0.95rem;
+    margin-left: auto;
+    border-radius: 999px;
+    border: 1px solid #bfd1e3;
+    background: #fff;
+    color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.68rem;
+    font-weight: 800;
+  }
+  .settings-page .tone-radio:checked + .tone-card {
+    border-color: #198754;
+    background: #f1faf5;
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.12);
+  }
+  .settings-page .tone-radio:checked + .tone-card::after {
+    content: '\2713';
+    color: #fff;
+    border-color: transparent;
+    background: linear-gradient(135deg, var(--gov-primary-a), var(--gov-primary-b));
+  }
+  .settings-page .tone-radio:focus-visible + .tone-card {
+    outline: none;
+    box-shadow: var(--gov-focus);
+  }
+
+  .settings-page .settings-readonly-grid .form-control {
+    background: var(--gov-bg);
+  }
+  .settings-page .settings-switch {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--gov-line);
+    border-radius: 12px;
+    background: #fbfdff;
+  }
+  .settings-page .settings-admin-note {
+    border-left: 3px solid #1f6dd8;
+    padding-left: 0.55rem;
+  }
+  .settings-page .account-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 84px;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .settings-page .account-status-badge.is-active {
+    background: #eaf7f1;
+    color: #0f6c3a;
+    border-color: #bfe5d1;
+  }
+  .settings-page .account-status-badge.is-inactive {
+    background: #fff4f4;
+    color: #8f2f2f;
+    border-color: #f0cccc;
+  }
+  .settings-page .form-check-input:checked {
+    background-color: #1f6dd8;
+    border-color: #1f6dd8;
+  }
+  .settings-page .settings-table-wrap {
+    border: 1px solid var(--gov-line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .settings-page .table {
+    margin-bottom: 0;
+  }
+  .settings-page .table thead th {
+    background: #f4f8fc;
+    color: #355777;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--gov-line);
+  }
+  .settings-page .table td {
+    color: #274a6c;
+    vertical-align: middle;
+  }
+  .settings-page small.text-muted,
+  .settings-page #appearanceStatus,
+  .settings-page .settings-note {
+    color: var(--gov-muted) !important;
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+  .settings-page .settings-qr-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border: 1px dashed var(--gov-line-strong);
+    border-radius: 12px;
+    background: #f8fbff;
+  }
+  .settings-page .settings-qr-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid var(--gov-line);
+    background: #fff;
+    object-fit: contain;
+    padding: 0.35rem;
+  }
+  .settings-page .settings-secret-code {
+    display: inline-block;
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+    background: #eef5ff;
+    border: 1px solid #cfe0f3;
+    color: #1f4b78;
+    word-break: break-all;
+  }
+
+  @media (max-width: 991.98px) {
+    .settings-page .appearance-theme-grid {
+      grid-template-columns: 1fr;
+    }
+    .settings-page .tone-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 767.98px) {
+    .settings-page .settings-profile-photo {
+      grid-template-columns: 1fr;
+    }
+    .settings-page .settings-qr-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .settings-page .tone-grid {
+      grid-template-columns: 1fr;
+    }
+    .settings-page .settings-tabs-nav {
+      gap: 0.4rem;
+    }
+    .settings-page .settings-tabs-nav .nav-link {
+      padding: 0.48rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }

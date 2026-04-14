@@ -1,0 +1,22 @@
+.todo-widget .todo-list .todo-item {
+  border: 0px;
+  margin-bottom: 0px;
+  padding: 20px 15px 15px 0px;
+}
+.todo-widget .todo-list .todo-item .custom-checkbox {
+  width: 100%;
+}
+.todo-widget .todo-list .todo-item .custom-checkbox .todo-label {
+  font-weight: 400;
+  width: 100%;
+}
+.todo-widget .todo-list .todo-item .custom-checkbox .custom-control-input:checked ~ .todo-label .todo-desc {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.todo-widget .todo-list .todo-item .custom-checkbox .custom-control-input:checked ~ .todo-label .badge {
+  text-decoration: line-through;
+}
+.todo-widget .todo-list .todo-item:hover {
+  z-index: 0;
+}/*# sourceMappingURL=task.css.map */
