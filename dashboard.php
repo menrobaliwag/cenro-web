@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/permissions.php';
-require_once __DIR__ . '/includes/role_utils.php';
 require_once __DIR__ . '/config/db.php';
 
 include __DIR__ . '/includes/header.php';
@@ -11,28 +10,6 @@ include __DIR__ . '/includes/topbar_sidebar.php';
 // Example counts (only query if allowed)
 $totaltruck_record = 0;
 $totalscavenger = 0;
-$currentRoleKey = resolve_session_role_key();
-$modulePermissionKeys = [
-  'mrf.truck',
-  'mrf.sorters',
-  'mrf.other_waste',
-  'mrf.waste_reduction',
-  'eco.violators',
-  'iec.manage',
-  'palitbasura.view',
-  'parks.view',
-  'mbcurp.view',
-  'monitoring.view',
-];
-$hasAssignedModules = is_super_role($currentRoleKey);
-if (!$hasAssignedModules) {
-  foreach ($modulePermissionKeys as $permKey) {
-    if (can($permKey)) {
-      $hasAssignedModules = true;
-      break;
-    }
-  }
-}
 
 if (can('mrf.truck')) {
   $q = mysqli_query($conn, "SELECT COUNT(*) AS total FROM truck_record");
@@ -105,7 +82,7 @@ if (can('mrf.sorters')) {
       <?php endif; ?>
 
       <!-- If walang permissions, show a simple message -->
-      <?php if (!$hasAssignedModules): ?>
+      <?php if (empty($_SESSION['permissions'])): ?>
       <div class="col-12">
         <div class="alert alert-warning">
           No modules assigned to your account yet. Please contact the administrator.

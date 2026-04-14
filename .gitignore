@@ -7,3 +7,5 @@ secrets/
 sql/backups/
 uploads/*
 !uploads/.gitkeep
+public_html.zip
+.codex_zip_extract_public_html/

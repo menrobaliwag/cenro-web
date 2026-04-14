@@ -1968,7 +1968,7 @@ include dirname(__DIR__, 2) . '/includes/topbar_sidebar.php';
                         <th style="width:7%;">#</th>
                         <th style="width:37%;">Employee Name</th>
                         <th style="width:18%;">Status</th>
-                        <th style="width:38%;">Note / Reason</th>
+                        <th style="width:38%;">Note / Reason / Area</th>
                       </tr>
                     </thead>
                     <tbody id="ecoAttendanceSheetBody">
@@ -2082,7 +2082,7 @@ include dirname(__DIR__, 2) . '/includes/topbar_sidebar.php';
                     <th style="width: 80px;" class="text-center">#</th>
                     <th>Employee Name</th>
                     <th class="text-center" style="width: 160px;">Status</th>
-                    <th>Note / Reason</th>
+                    <th>Note / Reason / Area</th>
                     <th class="text-center no-print" style="width: 110px;">Action</th>
                   </tr>
                 </thead>
